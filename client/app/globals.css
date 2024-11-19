@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter Font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Add light theme variables */
+:root {
+  --primary-color: #2563eb; /* Bright blue for primary actions */
+  --secondary-color: #10b981; /* Fresh green for accents */
+  --background-color: #f9fafb; /* Very light gray background */
+  --text-color: #1f2937; /* Dark gray for readability */
+  --muted-text-color: #6b7280; /* Muted text for subheadings */
+  --border-color: #e5e7eb; /* Light gray for borders */
+  --highlight-color: #fde047; /* Yellow for highlights */
+}
+
+body {
+  @apply bg-[var(--background-color)] text-[var(--text-color)] font-sans;
+  font-family: "Inter", sans-serif; /* Apply Inter font globally */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+a {
+  @apply text-[var(--primary-color)] hover:text-[var(--secondary-color)] underline;
+}
+
+button {
+  @apply px-4 py-2 rounded bg-[var(--primary-color)] text-white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Styling inputs for forms */
+input,
+textarea,
+select {
+  @apply border border-[var(--border-color)] p-2 rounded w-full;
+  background-color: white;
+  color: var(--text-color);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3); /* Soft focus glow */
+}
+
+/* Utility classes for cards */
+.card {
+  @apply bg-white border border-[var(--border-color)] shadow-lg rounded-lg p-6;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Adding a fun hover effect for icons */
+.icon {
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
