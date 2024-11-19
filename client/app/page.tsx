@@ -1,10 +1,15 @@
-import Hero from "@/components/Hero";
-//import Image from "next/image";
 
-export default function Home() {
+import React from 'react';
+import { Header } from '../components/Header';
+import { Hero } from '../components/Hero';
+import { Footer } from '../components/../components/Footer';
+
+export const Page = () => {
   return (
-    <div>
+    <main className="flex overflow-hidden flex-col pb-36 bg-pink-50 max-md:pb-24">
+      <Header />
       <Hero />
-    </div>
+      <Footer />
+    </main>
   );
-}
+};
